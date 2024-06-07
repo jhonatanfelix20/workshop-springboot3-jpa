@@ -43,6 +43,7 @@ public class OrderItem implements Serializable {
 		id.setOrder(order);
 	}
 	
+
 	public Produto getProduto() {
 		return id.getProduto();
 	}
