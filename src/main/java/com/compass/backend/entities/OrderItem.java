@@ -20,18 +20,18 @@ public class OrderItem implements Serializable {
 	
 	
 	private Integer quantidade;
-	private Double price;
+	private Double preco;
 	
 	public OrderItem() {
 		
 	}
 
-	public OrderItem(Order order, Produto produto, Integer quantidade, Double price) {
+	public OrderItem(Order order, Produto produto, Integer quantidade, Double preco) {
 		super();
 		id.setOrder(order);
 		id.setProduto(produto);
 		this.quantidade = quantidade;
-		this.price = price;
+		this.preco = preco;
 	}
 	
 	@JsonIgnore
@@ -60,12 +60,16 @@ public class OrderItem implements Serializable {
 		this.quantidade = quantidade;
 	}
 
-	public Double getPrice() {
-		return price;
+	public Double getPreco() {
+		return preco;
 	}
 
-	public void setPrice(Double price) {
-		this.price = price;
+	public void setPreco(Double preco) {
+		this.preco = preco;
+	}
+	
+	public Double getSubTotal() {
+		return preco * quantidade;
 	}
 
 	@Override
