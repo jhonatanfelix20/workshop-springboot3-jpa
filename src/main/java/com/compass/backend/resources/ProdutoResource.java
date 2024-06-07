@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.compass.backend.entities.Categoria;
 import com.compass.backend.entities.Produto;
 import com.compass.backend.services.ProdutoService;
 
