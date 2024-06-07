@@ -1,4 +1,4 @@
-package s;
+package com.compass.backend.resources.exceptions;
 
 import java.io.Serializable;
 import java.time.Instant;
