@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Profile;
 import com.compass.backend.entities.Categoria;
 import com.compass.backend.entities.Order;
 import com.compass.backend.entities.OrderItem;
+import com.compass.backend.entities.Pagamento;
 import com.compass.backend.entities.Produto;
 import com.compass.backend.entities.User;
 import com.compass.backend.entities.enums.OrderStatus;
@@ -83,6 +84,11 @@ public class TesteConfig implements CommandLineRunner{
 		OrderItem oi4 = new OrderItem(o3, p5, 2, p5.getPrice());
 		
 		orderItemRepository.saveAll(Arrays.asList(oi1, oi2, oi3, oi4));
+		
+		Pagamento pay1 = new Pagamento(null, Instant.parse("2019-06-20T21:53:07Z"), o1); 
+		o1.setPagamento(pay1);
+		
+		orderRepository.save(o1);
 	}
 	
 	
